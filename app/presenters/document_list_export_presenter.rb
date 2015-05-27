@@ -58,7 +58,7 @@ class DocumentListExportPresenter
   end
 
   def admin_url
-    Whitehall.url_maker.admin_edition_url(edition)
+    Whitehall.url_maker.admin_edition_url(edition, host: Whitehall.admin_host)
   end
 
   def first_published_on_govuk

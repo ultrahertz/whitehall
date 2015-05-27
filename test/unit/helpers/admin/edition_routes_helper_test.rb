@@ -7,10 +7,15 @@ class Admin::EditionRoutesHelperTest < ActionView::TestCase
     assert_equal "/government/admin/policies/#{p.id}", admin_edition_path(p)
   end
 
-  test 'admin_edition_url take an edition instance and uses polymorphic routes to generate the correct url' do
+  test 'admin_edition_url take an edition instance and uses polymorphic routes to generate the correct url with a specified host' do
     s = FactoryGirl.create(:speech)
     assert_equal "http://www.gov.uk/government/admin/speeches/#{s.id}", admin_edition_url(s, host: 'www.gov.uk')
   end
+
+  test 'admin_edition_url takes an edition instance and uses polymorphic routes to generate the correct whitehall-admin url when the host is specified as such' do
+      s = FactoryGirl.create(:speech)
+      assert_equal "#{Plek.find('whitehall-admin')}/government/admin/speeches/#{s.id}", admin_edition_url(s, host: Whitehall.admin_host)
+    end
 
   test 'edit_admin_edition_path take an edition instance and uses polymorphic routes to generate the correct path' do
     w = FactoryGirl.create(:worldwide_priority)
