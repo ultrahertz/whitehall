@@ -72,15 +72,6 @@ class AdminEditionPagesTest < ActionDispatch::PerformanceTest
     get "/government/admin/speeches/#{speech.id}/edit"
   end
 
-  test 'new supporting page page' do
-    get '/government/admin/supporting-pages/new'
-  end
-
-  test 'edit supporting page page' do
-    supporting_page = SupportingPage.draft.last
-    get "/government/admin/supporting-pages/#{supporting_page.id}/edit"
-  end
-
   test 'new worldwide priority page' do
     get '/government/admin/priority/new'
   end
