@@ -45,15 +45,6 @@ class AdminEditionPagesTest < ActionDispatch::PerformanceTest
     get "/government/admin/news/#{news.id}/edit"
   end
 
-  test 'new policy page' do
-    get '/government/admin/policies/new'
-  end
-
-  test 'edit policy page' do
-    policy = Policy.draft.last
-    get "/government/admin/policies/#{policy.id}/edit"
-  end
-
   test 'new publication page' do
     get '/government/admin/publications/new'
   end
