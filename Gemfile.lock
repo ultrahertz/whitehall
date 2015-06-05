@@ -66,6 +66,9 @@ GEM
     ast (2.0.0)
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
+    autoprefixer-rails (5.2.0)
+      execjs
+      json
     babosa (0.3.11)
     better_errors (2.1.0)
       coderay (>= 1.0.0)
@@ -76,8 +79,9 @@ GEM
     bootstrap-kaminari-views (0.0.2)
       kaminari (>= 0.13)
       rails (>= 3.1)
-    bootstrap-sass (2.3.2.2)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.4.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -169,6 +173,10 @@ GEM
       sanitize (~> 2.1.0)
     govuk-content-schema-test-helpers (1.3.0)
       json-schema (~> 2.5.1)
+    govuk_admin_template (2.3.0)
+      bootstrap-sass (~> 3.3.3)
+      jquery-rails (~> 3.1.1)
+      rails (>= 3.2.0)
     govuk_frontend_toolkit (3.1.0)
       rails (>= 3.1.0)
       sass (>= 3.2.0)
@@ -186,7 +194,7 @@ GEM
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jquery-rails (3.0.4)
+    jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.1.1)
@@ -447,7 +455,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-kaminari-views
-  bootstrap-sass (= 2.3.2.2)
   capybara (~> 2.4.4)
   carrierwave (= 0.9.0)
   chronic
@@ -463,11 +470,11 @@ DEPENDENCIES
   globalize (~> 5.0.0)
   govspeak (~> 3.3.0)
   govuk-content-schema-test-helpers (= 1.3.0)
+  govuk_admin_template (= 2.3.0)
   govuk_frontend_toolkit (= 3.1.0)
   invalid_utf8_rejector (~> 0.0.1)
   isbn_validation
   jbuilder
-  jquery-rails
   jquery-ui-rails
   kaminari (= 0.15.1)
   launchy (~> 2.4.3)
