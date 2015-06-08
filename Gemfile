@@ -21,7 +21,7 @@ gem 'addressable'
 gem 'unicorn', '4.6.2'
 gem 'kaminari', '0.15.1'
 gem 'govuk_admin_template', '2.3.0'
-gem 'bootstrap-kaminari-views'
+gem 'bootstrap-kaminari-views', '0.0.5'
 gem 'gds-api-adapters', '18.7.0'
 gem 'mime-types', '1.25.1'
 gem 'whenever', '0.9.4', require: false
