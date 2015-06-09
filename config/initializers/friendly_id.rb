@@ -7,6 +7,6 @@ FriendlyId.defaults do |config|
   end
 
   config.base = :name
-  config.use :sequentially_slugged, :finders, CustomNormalisation
+  config.use :sequentially_slugged, CustomNormalisation
   config.sequence_separator = '--'
 end
