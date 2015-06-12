@@ -217,3 +217,21 @@ jQuery(function($) {
 
   SetTopicsFromPolicy.init();
 }(jQuery));
+
+(function($) {
+  var $policy_input = $('#edition_policy_content_ids'),
+      $important_checkbox = $('#edition_important');
+
+  var toggle_checkbox_if_policies_selected = function() {
+    if ($policy_input.val().length >= 1) {
+      $important_checkbox.prop('disabled', false)
+    } else {
+      $important_checkbox.prop('disabled', true)
+    }
+  }
+
+  if ($policy_input) {
+    toggle_checkbox_if_policies_selected();
+    $policy_input.change(enable_checkbox_if_policies_selected);
+  }
+}(jQuery));
