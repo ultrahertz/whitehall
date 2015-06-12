@@ -43,31 +43,6 @@
     direction: ltr;
   }
 
-  .show-other-content {
-    padding: 0;
-    color: $link-colour;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-      outline: none;
-      cursor: pointer;
-    }
-    &:after {
-      display: inline-block;
-      font-size: 8px;
-      height: $gutter-one-third;
-      padding-left: $gutter-one-sixth;
-      vertical-align: middle;
-      content: " \25BC";
-    }
-  }
-  &.open {
-    .show-other-content:after {
-      content: " \25B2";
-    }
-  }
-
   .organisation {
     overflow: hidden;
     list-style: none;
